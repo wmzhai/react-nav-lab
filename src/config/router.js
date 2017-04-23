@@ -39,8 +39,11 @@ export const Tabs = TabNavigator({
         label: 'Me',
         icon: ({ tintColor }) => <Icon name="account-circle" size={35} color={tintColor} />
       },
+      
     },
   },
+},{
+  tabBarPosition: 'bottom'
 });
 
 export const SettingsStack = StackNavigator({
