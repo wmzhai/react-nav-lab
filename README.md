@@ -1,11 +1,63 @@
 # react-navigation 使用指南
 
+## Navigators
 
-## navigationOptions
+Navigators用来定义应用程序的导航结构，也用来渲染可配置的header和tabbar。
+
+总共有三种类型：
+
+* StackNavigator - 一次渲染一个screen并提供screen之间的跳转，新建的screen位于栈的顶端。
+* TabNavigator - 渲染一个tabbar，让用户在不同tab下的几个screen间做切换
+* DrawerNavigator - 从屏幕左边滑出的抽屉
+
+
+### StackNavigator
+
+一个概念上的栈，每个新Screen都被放到栈顶，返回时则从栈顶弹出一个Screen。
+
+
+#### 配置 Header 
+
+仅StackNavigator有Header。动态设置如下
+
+```
+class ChatScreen extends React.Component {
+  static navigationOptions = ({ navigation }) => ({
+    title: `Chat with ${navigation.state.params.user}`,
+  });
+  ...
+}
+```
+
+添加右上角按钮
+
+```
+static navigationOptions = {
+  headerRight: <Button title="Info" />,
+  ...
+```
+
+
+### TabNavigator
+
+
+
+## Screen
+
+### navigation属性
+
+Screen的navigation属性允许screen来dispatch跳转action，比如打开另外一个screen
+
+
+### navigationOptions
+
+Screen的navigationOptions用来定制screen如何在navigator中展现，比如 header title, tab label。
+
+
 
 https://reactnavigation.org/docs/navigators/navigation-options
 
-### 可以直接写成Screen定义里的static变量
+#### 可以直接写成Screen定义里的static变量
 
 ```
 class HomeScreen extends React.Component {
@@ -18,7 +70,7 @@ class HomeScreen extends React.Component {
 }
 ```
 
-### 可以在构建Router时写
+#### 可以在构建Router时写
 
 ```
 const FeedStack = StackNavigator({
@@ -31,7 +83,7 @@ const FeedStack = StackNavigator({
 });
 ```
 
-### 也可以动态创建
+#### 也可以动态创建
 
 下面的内容就是根据route参数动态生成的
 
@@ -52,7 +104,7 @@ static navigationOptions = ({ navigation }) => {
 }
 ```
 
-### 相关字段
+#### 相关字段
 
 * title
 * tabBar
@@ -71,7 +123,6 @@ static navigationOptions = {
 }
 ```
 
-### 
 
 ## 跳转问题
 
@@ -118,37 +169,3 @@ class ChatScreen extends React.Component {
   }
 }
 ```
-
-
-
-
-## StackNavigator
-
-一个概念上的栈，每个新Screen都被放到栈顶，返回时则从栈顶弹出一个Screen。
-
-
-### 配置 Header 
-
-仅StackNavigator有Header。动态设置如下
-
-```
-class ChatScreen extends React.Component {
-  static navigationOptions = ({ navigation }) => ({
-    title: `Chat with ${navigation.state.params.user}`,
-  });
-  ...
-}
-```
-
-添加右上角按钮
-
-```
-static navigationOptions = {
-  headerRight: <Button title="Info" />,
-  ...
-```
-
-
-## TabNavigator
-
-
