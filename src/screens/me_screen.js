@@ -5,7 +5,7 @@ import { me } from '../config/data'
 
 class MeScreen extends Component {
   handleSettingsPress = () => {
-    this.props.navigation.navigate('Settings')
+    this.props.navigation.navigate('settings')
   }
 
   render() {

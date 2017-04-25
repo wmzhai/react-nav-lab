@@ -9,7 +9,7 @@ import { users } from '../config/data'
 
 class FeedScreen extends Component {
   onLearnMore = (user) => {
-    this.props.navigation.navigate('Details', { ...user })
+    this.props.navigation.navigate('details', { ...user })
   }
 
   render() {
