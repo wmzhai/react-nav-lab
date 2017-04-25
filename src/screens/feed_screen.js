@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import {
   Text,
   View,
   ScrollView
-} from 'react-native';
-import { List, ListItem } from 'react-native-elements';
-import { users } from '../config/data';
+} from 'react-native'
+import { List, ListItem } from 'react-native-elements'
+import { users } from '../config/data'
 
-class Feed extends Component {
+class FeedScreen extends Component {
   onLearnMore = (user) => {
-    this.props.navigation.navigate('Details', { ...user });
-  };
+    this.props.navigation.navigate('Details', { ...user })
+  }
 
   render() {
     return (
@@ -32,4 +32,4 @@ class Feed extends Component {
   }
 }
 
-export default Feed;
+export default FeedScreen

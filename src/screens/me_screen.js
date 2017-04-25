@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import { ScrollView } from 'react-native';
-import { Tile, List, ListItem, Button } from 'react-native-elements';
-import { me } from '../config/data';
+import React, { Component } from 'react'
+import { ScrollView } from 'react-native'
+import { Tile, List, ListItem, Button } from 'react-native-elements'
+import { me } from '../config/data'
 
-class Me extends Component {
+class MeScreen extends Component {
   handleSettingsPress = () => {
-    this.props.navigation.navigate('Settings');
-  };
+    this.props.navigation.navigate('Settings')
+  }
 
   render() {
     return (
@@ -58,10 +58,10 @@ class Me extends Component {
           />
         </List>
       </ScrollView>
-    );
+    )
   }
 }
 
-Me.defaultProps = { ...me };
+MeScreen.defaultProps = { ...me }
 
-export default Me;
+export default MeScreen

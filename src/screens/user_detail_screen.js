@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { ScrollView } from 'react-native';
-import { Tile, List, ListItem } from 'react-native-elements';
+import React, { Component } from 'react'
+import { ScrollView } from 'react-native'
+import { Tile, List, ListItem } from 'react-native-elements'
 
-class UserDetail extends Component {
+class UserDetailScreen extends Component {
   render() {
-    const { picture, name, email, phone, login, dob, location } = this.props.navigation.state.params;
+    const { picture, name, email, phone, login, dob, location } = this.props.navigation.state.params
 
     return (
       <ScrollView>
@@ -49,8 +49,8 @@ class UserDetail extends Component {
           />
         </List>
       </ScrollView>
-    );
+    )
   }
 }
 
-export default UserDetail;
+export default UserDetailScreen
