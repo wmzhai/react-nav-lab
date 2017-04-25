@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import {
   Text,
   View,
-  ScrollView
+  ScrollView,
+  Platform
 } from 'react-native'
 import { List, ListItem, Icon } from 'react-native-elements'
 import { users } from '../config/data'
@@ -13,7 +14,8 @@ class FeedScreen extends Component {
     tabBar: {
       label: '列表',
       icon: ({ tintColor }) => <Icon name="list" size={35} color={tintColor} />
-    }
+    },
+    header: () =>({ style: { marginTop: Platform.OS === 'android'? 24 : 0 } })
   }
 
   onLearnMore = (user) => {

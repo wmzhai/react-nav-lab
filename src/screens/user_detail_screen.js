@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import { ScrollView } from 'react-native'
+import { ScrollView, Platform } from 'react-native'
 import { Tile, List, ListItem, Button } from 'react-native-elements'
 
 class UserDetailScreen extends Component {
   static navigationOptions = {
-    title: ({state}) => `${state.params.name.last.toUpperCase()} `
+    title: ({state}) => `${state.params.name.last.toUpperCase()} `,
+    header: () =>({ style: { marginTop: Platform.OS === 'android'? 24 : 0 } })
   }    
 
   handleSettingsPress = () => {

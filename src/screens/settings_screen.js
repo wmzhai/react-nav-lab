@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import { ScrollView } from 'react-native'
+import { ScrollView, Platform } from 'react-native'
 import { List, ListItem } from 'react-native-elements'
 
 class SettingsScreen extends Component {
   static navigationOptions = {
-    title: '设置'
+    title: '设置',
+    header: () =>({ style: { marginTop: Platform.OS === 'android'? 24 : 0 } })
   }
 
   render() {

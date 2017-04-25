@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { ScrollView } from 'react-native'
+import { ScrollView, Platform } from 'react-native'
 import { Tile, List, ListItem, Button, Icon } from 'react-native-elements'
 import { me } from '../config/data'
 
@@ -8,7 +8,8 @@ class MeScreen extends Component {
     tabBar: {
       label: '我的',
       icon: ({ tintColor }) => <Icon name="account-circle" size={35} color={tintColor} />
-    }
+    },
+    header: () =>({ style: { marginTop: Platform.OS === 'android'? 24 : 0 } })
   }
 
   handleSettingsPress = () => {
