@@ -3,6 +3,10 @@ import { ScrollView } from 'react-native'
 import { Tile, List, ListItem } from 'react-native-elements'
 
 class UserDetailScreen extends Component {
+  static navigationOptions = {
+    title: ({state}) => `${state.params.name.last.toUpperCase()} `
+  }    
+  
   render() {
     const { picture, name, email, phone, login, dob, location } = this.props.navigation.state.params
 

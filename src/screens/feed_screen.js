@@ -9,6 +9,7 @@ import { users } from '../config/data'
 
 class FeedScreen extends Component {
   static navigationOptions = {
+    title: '列表',
     tabBar: {
       label: '列表',
       icon: ({ tintColor }) => <Icon name="list" size={35} color={tintColor} />
@@ -16,7 +17,7 @@ class FeedScreen extends Component {
   }
 
   onLearnMore = (user) => {
-    this.props.navigation.navigate('details', { ...user })
+    this.props.navigation.navigate('user_detail', { ...user })
   }
 
   render() {
@@ -35,7 +36,7 @@ class FeedScreen extends Component {
           ))}
         </List>
       </ScrollView>
-    );
+    )
   }
 }
 
