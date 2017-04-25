@@ -5,6 +5,7 @@ import { Icon } from 'react-native-elements'
 import FeedScreen from '../screens/feed_screen'
 import MeScreen from '../screens/me_screen'
 import UserDetailScreen from '../screens/user_detail_screen'
+import SettingsScreen from '../screens/settings_screen'
 
 export const FeedStack = StackNavigator({
   feed: {
@@ -25,4 +26,16 @@ export const Tabs = TabNavigator({
   }
 })
 
-export default Tabs
+export const Router = StackNavigator({
+  tabs: {
+    screen: Tabs
+  },
+  settings: {
+    screen: SettingsScreen
+  }
+},{
+  mode: 'modal',
+  headerMode: 'none'
+})
+
+export default Router
