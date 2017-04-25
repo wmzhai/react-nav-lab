@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { Root, Tabs } from './config/router';
+import React, { Component } from 'react'
+import Router from './config/router'
 
 class App extends Component {
   render() {
-    return <Root />;
+    return <Router />
   }
 }
 
-export default App;
+export default App

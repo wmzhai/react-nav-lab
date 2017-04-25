@@ -55,7 +55,7 @@ export const SettingsStack = StackNavigator({
   },
 });
 
-export const Root = StackNavigator({
+export const Router = StackNavigator({
   Tabs: {
     screen: Tabs,
   },
@@ -66,3 +66,5 @@ export const Root = StackNavigator({
   mode: 'modal',
   headerMode: 'none',
 });
+
+export default Router
