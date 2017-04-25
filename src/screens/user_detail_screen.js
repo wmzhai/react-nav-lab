@@ -25,19 +25,19 @@ class UserDetailScreen extends Component {
         />
 
         <Button
-          title='Settings'
+          title='设置'
           buttonStyle={{marginTop:20}}
           onPress={this.handleSettingsPress}
         />
 
         <List>
           <ListItem
-            title="Email"
+            title="邮件"
             rightTitle={email}
             hideChevron
           />
           <ListItem
-            title="Phone"
+            title="电话"
             rightTitle={phone}
             hideChevron
           />
@@ -45,7 +45,7 @@ class UserDetailScreen extends Component {
 
         <List>
           <ListItem
-            title="Username"
+            title="用户名"
             rightTitle={login.username}
             hideChevron
           />
@@ -53,12 +53,12 @@ class UserDetailScreen extends Component {
 
         <List>
           <ListItem
-            title="Birthday"
+            title="生日"
             rightTitle={dob}
             hideChevron
           />
           <ListItem
-            title="City"
+            title="城市"
             rightTitle={location.city}
             hideChevron
           />

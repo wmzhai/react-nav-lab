@@ -13,18 +13,18 @@ class SettingsScreen extends Component {
       <ScrollView>
         <List>
           <ListItem
-            title="Notifications"
+            title="通知"
           />
           <ListItem
-            title="Profile"
+            title="个人设置"
           />
           <ListItem
-            title="Password"
+            title="修改密码"
           />
         </List>
         <List>
           <ListItem
-            title="Sign Out"
+            title="退出"
             rightIcon={{ name: 'cancel' }}
           />
         </List>
