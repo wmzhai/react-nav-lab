@@ -7,40 +7,32 @@ import MeScreen from '../screens/me_screen'
 import UserDetailScreen from '../screens/user_detail_screen'
 import SettingsScreen from '../screens/settings_screen'
 
-export const FeedStack = StackNavigator({
-  feed: {
-    screen: FeedScreen
-  },
-  user_detail: {
-    screen: UserDetailScreen
-  }
-})
-
-export const Tabs = TabNavigator({
-  feed: {
-    screen: FeedStack
-  },
-  me: {
-    screen: MeScreen
-  }
-})
-
-export const SettingsStack = StackNavigator({
-  settings: {
-    screen: SettingsScreen
-  }
-})
-
-export const Router = StackNavigator({
+export default StackNavigator({
   tabs: {
-    screen: Tabs
+    screen: TabNavigator({
+      feed: {
+        screen: StackNavigator({
+          feed: {
+            screen: FeedScreen
+          },
+          user_detail: {
+            screen: UserDetailScreen
+          }
+        })
+      },
+      me: {
+        screen: MeScreen
+      }
+    })
   },
   settings: {
-    screen: SettingsStack
+    screen: StackNavigator({
+      settings: {
+        screen: SettingsScreen
+      }
+    })
   }
 },{
   mode: 'modal',
   headerMode: 'none'
 })
-
-export default Router
