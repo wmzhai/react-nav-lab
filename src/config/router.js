@@ -23,6 +23,8 @@ export default StackNavigator({
       me: {
         screen: MeScreen
       }
+    },{
+      tabBarPosition: 'bottom'
     })
   },
   settings: {
