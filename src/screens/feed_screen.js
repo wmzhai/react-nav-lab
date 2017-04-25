@@ -4,10 +4,17 @@ import {
   View,
   ScrollView
 } from 'react-native'
-import { List, ListItem } from 'react-native-elements'
+import { List, ListItem, Icon } from 'react-native-elements'
 import { users } from '../config/data'
 
 class FeedScreen extends Component {
+  static navigationOptions = {
+    tabBar: {
+      label: '列表',
+      icon: ({ tintColor }) => <Icon name="list" size={35} color={tintColor} />
+    }
+  }
+
   onLearnMore = (user) => {
     this.props.navigation.navigate('details', { ...user })
   }
