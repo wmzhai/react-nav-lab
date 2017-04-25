@@ -3,6 +3,10 @@ import { ScrollView } from 'react-native'
 import { List, ListItem } from 'react-native-elements'
 
 class SettingsScreen extends Component {
+  static navigationOptions = {
+    title: '设置'
+  }
+
   render() {
     return (
       <ScrollView>

@@ -16,7 +16,6 @@ export const FeedStack = StackNavigator({
   }
 })
 
-
 export const Tabs = TabNavigator({
   feed: {
     screen: FeedStack
@@ -26,12 +25,18 @@ export const Tabs = TabNavigator({
   }
 })
 
+export const SettingsStack = StackNavigator({
+  settings: {
+    screen: SettingsScreen
+  }
+})
+
 export const Router = StackNavigator({
   tabs: {
     screen: Tabs
   },
   settings: {
-    screen: SettingsScreen
+    screen: SettingsStack
   }
 },{
   mode: 'modal',
