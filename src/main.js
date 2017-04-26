@@ -1,3 +1,4 @@
+import Expo from 'expo'
 import React, { Component } from 'react'
 import Router from './config/router'
 
@@ -7,4 +8,4 @@ class App extends Component {
   }
 }
 
-export default App
+Expo.registerRootComponent(App);
