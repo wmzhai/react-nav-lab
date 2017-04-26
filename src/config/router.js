@@ -1,6 +1,4 @@
-import React from 'react'
 import { TabNavigator, StackNavigator } from 'react-navigation'
-import { Icon } from 'react-native-elements'
 
 import FeedScreen from '../screens/feed_screen'
 import MeScreen from '../screens/me_screen'
@@ -23,7 +21,7 @@ export default StackNavigator({
       me: {
         screen: MeScreen
       }
-    },{
+    }, {
       tabBarPosition: 'bottom'
     })
   },
@@ -34,7 +32,7 @@ export default StackNavigator({
       }
     })
   }
-},{
+}, {
   mode: 'modal',
   headerMode: 'none'
 })

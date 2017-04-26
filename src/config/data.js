@@ -34,7 +34,7 @@ export const me = {
     "thumbnail": "https://randomuser.me/api/portraits/thumb/men/2.jpg"
   },
   "nat": "US"
-};
+}
 
 export const users = [
   {
@@ -777,4 +777,4 @@ export const users = [
     },
     "nat": "FR"
   }
-];
+]

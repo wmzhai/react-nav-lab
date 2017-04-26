@@ -24,7 +24,7 @@ Navigators用来定义应用程序的导航结构，也用来渲染可配置的h
 class ChatScreen extends React.Component {
   static navigationOptions = ({ navigation }) => ({
     title: `Chat with ${navigation.state.params.user}`,
-  });
+  })
   ...
 }
 ```
@@ -63,9 +63,9 @@ https://reactnavigation.org/docs/navigators/navigation-options
 class HomeScreen extends React.Component {
   static navigationOptions = {
     title: 'Welcome',
-  };
+  }
   render() {
-    return <Text>Hello, Navigation!</Text>;
+    return <Text>Hello, Navigation!</Text>
   }
 }
 ```
@@ -80,7 +80,7 @@ const FeedStack = StackNavigator({
       title: 'Feed',
     },
   }
-});
+})
 ```
 
 #### 也可以动态创建
@@ -89,9 +89,9 @@ const FeedStack = StackNavigator({
 
 ```
 static navigationOptions = ({ navigation }) => {
-  const {state, setParams} = navigation;
-  const isInfo = state.params.mode === 'info';
-  const {user} = state.params;
+  const {state, setParams} = navigation
+  const isInfo = state.params.mode === 'info'
+  const {user} = state.params
   return {
     title: isInfo ? `${user}'s Contact Info` : `Chat with ${state.params.user}`,
     headerRight: (
@@ -99,7 +99,7 @@ static navigationOptions = ({ navigation }) => {
         title={isInfo ? 'Done' : `${user}'s info`}
         onPress={() => setParams({ mode: isInfo ? 'none' : 'info'})}
       />
-    ),
+    )
   }
 }
 ```
@@ -133,7 +133,7 @@ static navigationOptions = {
 通过对象实例获取
 
 ```
-const { navigate } = this.props.navigation;
+const { navigate } = this.props.navigation
 ```
 
 通过类获取
@@ -142,7 +142,7 @@ const { navigate } = this.props.navigation;
 class ChatScreen extends React.Component {
   static navigationOptions = ({ navigation }) => ({
     title: `Chat with ${navigation.state.params.user}`,
-  });
+  })
   ...
 }
 ```
@@ -153,7 +153,7 @@ class ChatScreen extends React.Component {
 跳转时可以传递进入新路由的参数，下面代码则是传入了一个user参数到新路由里
 
 ```
-this.props.navigation.navigate('Chat', { user:  'Lucy' });
+this.props.navigation.navigate('Chat', { user:  'Lucy' })
 ```
 
 ### 获取参数
@@ -164,8 +164,8 @@ this.props.navigation.navigate('Chat', { user:  'Lucy' });
 ```
 class ChatScreen extends React.Component {
   render() {
-    const { params } = this.props.navigation.state;
-    return <Text>Chat with {params.user}</Text>;
+    const { params } = this.props.navigation.state
+    return <Text>Chat with {params.user}</Text>
   }
 }
 ```

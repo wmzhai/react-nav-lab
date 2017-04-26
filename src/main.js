@@ -8,4 +8,4 @@ class App extends Component {
   }
 }
 
-Expo.registerRootComponent(App);
+Expo.registerRootComponent(App)

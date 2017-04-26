@@ -5,6 +5,9 @@
   "author": null,
   "private": true,
   "main": "src/main.js",
+  "scripts": {
+    "lint": "eslint src"
+  },
   "dependencies": {
     "expo": "^15.0.2",
     "react": "~15.5.0",
@@ -14,5 +17,15 @@
     "react-navigation": "^1.0.0-beta.7",
     "react-redux": "^5.0.4",
     "redux": "^3.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-config-standard-react": "^5.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^6.10.3",
+    "eslint-plugin-standard": "^3.0.1"
   }
 }
