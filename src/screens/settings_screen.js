@@ -30,7 +30,7 @@ class SettingsScreen extends Component {
 
 SettingsScreen.navigationOptions = {
   title: '设置',
-  header: () => ({ style: { marginTop: Platform.OS === 'android'? 24 : 0 } })
+  header: () => ({ style: { marginTop: Platform.OS === 'android' ? 24 : 0 } })
 }
 
 export default SettingsScreen

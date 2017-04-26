@@ -3,17 +3,22 @@ import { ScrollView, Platform } from 'react-native'
 import { Tile, List, ListItem, Button } from 'react-native-elements'
 
 class UserDetailScreen extends Component {
-  handleSettingsPress = () => {
+  constructor (props) {
+    super(props)
+    this.handleSettingsPress = this.handleSettingsPress.bind(this)
+  }
+
+  handleSettingsPress () {
     this.props.navigation.navigate('settings')
   }
 
-  render() {
+  render () {
     const { picture, name, email, phone, login, dob, location } = this.props.navigation.state.params
 
     return (
       <ScrollView>
         <Tile
-          imageSrc={{ uri: picture.large}}
+          imageSrc={{ uri: picture.large }}
           featured
           title={`${name.first.toUpperCase()} ${name.last.toUpperCase()}`}
           caption={email}
@@ -21,18 +26,18 @@ class UserDetailScreen extends Component {
 
         <Button
           title='设置'
-          buttonStyle={{marginTop:20}}
+          buttonStyle={{marginTop: 20}}
           onPress={this.handleSettingsPress}
         />
 
         <List>
           <ListItem
-            title="邮件"
+            title='邮件'
             rightTitle={email}
             hideChevron
           />
           <ListItem
-            title="电话"
+            title='电话'
             rightTitle={phone}
             hideChevron
           />
@@ -40,7 +45,7 @@ class UserDetailScreen extends Component {
 
         <List>
           <ListItem
-            title="用户名"
+            title='用户名'
             rightTitle={login.username}
             hideChevron
           />
@@ -48,12 +53,12 @@ class UserDetailScreen extends Component {
 
         <List>
           <ListItem
-            title="生日"
+            title='生日'
             rightTitle={dob}
             hideChevron
           />
           <ListItem
-            title="城市"
+            title='城市'
             rightTitle={location.city}
             hideChevron
           />
@@ -65,7 +70,7 @@ class UserDetailScreen extends Component {
 
 UserDetailScreen.navigationOptions = {
   title: ({state}) => `${state.params.name.last.toUpperCase()} `,
-  header: () =>({ style: { marginTop: Platform.OS === 'android'? 24 : 0 } })
-}    
+  header: () => ({ style: { marginTop: Platform.OS === 'android' ? 24 : 0 } })
+}
 
 export default UserDetailScreen

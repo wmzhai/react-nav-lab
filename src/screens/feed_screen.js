@@ -35,7 +35,7 @@ class FeedScreen extends Component {
 }
 
 FeedScreen.propTypes = {
-  navigation: PropTypes.object
+  navigation: PropTypes.object.isRequired
 }
 
 FeedScreen.navigationOptions = {
