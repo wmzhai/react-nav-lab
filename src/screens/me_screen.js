@@ -4,14 +4,6 @@ import { Tile, List, ListItem, Button, Icon } from 'react-native-elements'
 import { me } from '../config/data'
 
 class MeScreen extends Component {
-  static navigationOptions = {
-    tabBar: {
-      label: '我的',
-      icon: ({ tintColor }) => <Icon name="account-circle" size={35} color={tintColor} />
-    },
-    header: () =>({ style: { marginTop: Platform.OS === 'android'? 24 : 0 } })
-  }
-
   handleSettingsPress = () => {
     this.props.navigation.navigate('settings')
   }
@@ -68,6 +60,14 @@ class MeScreen extends Component {
       </ScrollView>
     )
   }
+}
+
+MeScreen.navigationOptions = {
+  tabBar: {
+    label: '我的',
+    icon: ({ tintColor }) => <Icon name="account-circle" size={35} color={tintColor} />
+  },
+  header: () =>({ style: { marginTop: Platform.OS === 'android'? 24 : 0 } })
 }
 
 MeScreen.defaultProps = { ...me }

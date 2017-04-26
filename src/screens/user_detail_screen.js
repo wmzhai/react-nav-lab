@@ -3,11 +3,6 @@ import { ScrollView, Platform } from 'react-native'
 import { Tile, List, ListItem, Button } from 'react-native-elements'
 
 class UserDetailScreen extends Component {
-  static navigationOptions = {
-    title: ({state}) => `${state.params.name.last.toUpperCase()} `,
-    header: () =>({ style: { marginTop: Platform.OS === 'android'? 24 : 0 } })
-  }    
-
   handleSettingsPress = () => {
     this.props.navigation.navigate('settings')
   }
@@ -67,5 +62,10 @@ class UserDetailScreen extends Component {
     )
   }
 }
+
+UserDetailScreen.navigationOptions = {
+  title: ({state}) => `${state.params.name.last.toUpperCase()} `,
+  header: () =>({ style: { marginTop: Platform.OS === 'android'? 24 : 0 } })
+}    
 
 export default UserDetailScreen

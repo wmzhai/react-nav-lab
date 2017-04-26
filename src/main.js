@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Router from './config/router'
 
 class App extends Component {
-  render() {
+  render () {
     return <Router />
   }
 }
