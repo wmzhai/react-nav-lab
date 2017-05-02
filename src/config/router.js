@@ -5,7 +5,7 @@ import MeScreen from '../screens/me_screen'
 import UserDetailScreen from '../screens/user_detail_screen'
 import SettingsScreen from '../screens/settings_screen'
 
-export default StackNavigator({
+const Router = StackNavigator({
   tabs: {
     screen: TabNavigator({
       feed: {
@@ -36,3 +36,5 @@ export default StackNavigator({
   mode: 'modal',
   headerMode: 'none'
 })
+
+export default Router
